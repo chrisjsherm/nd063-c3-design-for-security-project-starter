@@ -1,0 +1,6 @@
+GuardDuty identified the Attack instance was performing an SSH brute force attack, and it also
+Identified the Web Service instance was the target of an SSH brute force attack.
+
+The GuardDuty documentation for the UnauthorizedAccess:EC2/SSHBruteForce finding type says that
+GuardDuty detects this attack only through monitoring traffic on port 22. We can
+allow monitoring in our VPC by enabling VPC flow logs.

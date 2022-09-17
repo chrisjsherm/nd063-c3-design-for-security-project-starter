@@ -1,0 +1,18 @@
+Some of the Config's non-compliant rules are related to the CloudFormation code
+we deployed. Examples include the EC2 instances not being configured to use Instance 
+Metadata Service Version 2 (IMSV2), EC2 instances having a public IP address, EC2 instances
+not configured to use Systems Manager, and the S3 buckets not having a lifecycle policy
+enabled. We can address these non-compliant rules by configuring the instances to use
+IMSV2, putting the instances behind load balancers and removing the public IP addresses,
+configure instances to use the Systems Manager, and adding a lifecycle policy to the
+recipe S3 buckets.  
+
+All Inspector findings are related to the CloudFormation code we deployed. We
+should eliminate the web services's inbound rules allowing traffic from anywhere
+except from the application load balancer security group.
+
+All three high-severity issues that Security Hub found are related to the CloudFormation
+code. We should fix these by removing SSH access to our instances, instead using immutable
+instances; changing the default security group in our VPC to restrict all traffic; and 
+removing the security group inbound and outbound rules that allow all traffic on all ports
+from all protocols. 

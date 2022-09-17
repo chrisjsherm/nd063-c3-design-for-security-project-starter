@@ -1,0 +1,11 @@
+1a. Scan IaC templates: Terrascan
+
+1b. Scan AMIs or containers: twistcli (Prisma Cloud from Palo Alto Networks)
+
+1c. Scan AWS environment for cloud configuration vulnerabilities: AWS Inspector
+
+2a. S3 versioning not enabled | high | bucket4a | aws_s3_bucket | IAM
+
+2b. CVE-2017-17458 | critical | mercurial | fixed in 4.4.1 | In Mercurial before 4.4.1, it is possible that a specially malformed repository can cause Git sub-repositories to run arbitrary code.
+
+2c. Port 22 is reachable from an Internet Gateway | Medium | i-04ef6bead027afd7a
